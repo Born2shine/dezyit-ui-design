@@ -1,6 +1,7 @@
 import playstore from "../../assets/images/google-play-store.png"
 import appstore from "../../assets/images/appstore.png"
 import iphone_1 from "../../assets/images/iphones/portrait/iphone-1.png"
+import { BsChevronLeft, BsChevronRight, BsChevronDoubleLeft, BsChevronDoubleRight } from "react-icons/bs" 
 const Home = () => {
     return (
        <section className="main-content">
@@ -13,7 +14,7 @@ const Home = () => {
                         <p>Time to innovate? let's Dezy it!</p>
                        </div>
                        <div className="iphone-animate">
-                           <img src={iphone_1} alt="iphone" />
+                           <img src="https://static.wixstatic.com/media/ec9816_58d376c7bae642ff8c9bc2d22895f107~mv2.png/v1/fill/w_358,h_577,al_c,q_95/Design%20Thinking%20Sprint%20-%20Centre3.webp" alt="iphone" />
                        </div>
                        <div className="download-app">
                            <h4>Download Now! </h4>
@@ -203,6 +204,15 @@ const Home = () => {
                    </article>
                    {/* end single post */}
                </div>
+               <div className="pagination">
+                    <ul>
+                        <li className="navigator disabled"><BsChevronDoubleLeft/></li>
+                        <li className="navigator disabled"><BsChevronLeft/></li>
+                        <li className="navigator"><span className="links">1/8</span></li>
+                        <li className="navigator"><BsChevronRight/></li>
+                        <li className="navigator"><BsChevronDoubleRight/></li>
+                    </ul>
+                </div>
            </section>
        </section>
     )

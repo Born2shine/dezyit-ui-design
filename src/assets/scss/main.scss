@@ -47,6 +47,9 @@ body{
         align-items: center;
         width: 80%;
         margin: 0 auto;
+        li{
+            margin: 0 5px;
+        }
 
     }
 }
@@ -61,7 +64,7 @@ h1{
     
 }
 p{
-    line-height: 1.5;
+    line-height: 1.7;
     margin-top: 15px;
     font-weight: normal;
 }
@@ -171,7 +174,7 @@ p{
             background: url("../images/bg/bg-1.png") center/cover no-repeat;
             padding: 25px;
            .content{
-               padding-top: 55px;
+               padding-top: 75px;
                 .left-aside{
                     article{
                         .title{
@@ -183,8 +186,14 @@ p{
                                 line-height: 1;
                             }
                             p{
-                                line-height: 4;
+                                line-height: 3;
                                 font-size: 18px;
+                            }
+                        }
+                        .download-app{
+                            p{
+                                margin: 2px 0;
+                                font-weight: bold;
                             }
                         }
                     }
@@ -209,6 +218,9 @@ p{
                 color: $clr-white;
                 margin-top: 30px;
                 margin-bottom: 35px;
+                p{
+                    line-height: 1.7;
+                }
                 .gallery-1,.gallery-3{
                     display: none;
                 }
@@ -270,7 +282,8 @@ p{
             .posts{
                 .single-post{
                     background: $clr-white;
-                    margin: 40px 0;
+                    margin: 30px 0;
+                    
                     .post-content{
                         padding: 24px;
                         margin: 15px 0;
@@ -298,6 +311,85 @@ p{
                             color: $clr-grey-3;
                         }
                     }
+                }
+            }
+            .pagination{
+                ul{
+                    display: flex;
+                    justify-content: space-around;
+                    .navigator{
+                        color: $clr-grey-2;
+                        font-size: 18px;
+                    }
+                    .disabled{
+                        color: $clr-grey;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        background: $clr-primary-5;
+        padding: 20px;
+        .footer-wrapper{
+            display: flex;
+            flex-direction: column;
+            color: $clr-white;
+            // .contact-form, .quick-links, .contact-address {
+            //     .title{
+            //         // font-weight: 500;
+            //     }
+            // }
+            .quick-links{
+                .about{
+                    display: none;
+                }
+                .download-app{
+                    margin: 10px 0;
+                    .title{
+                        font-size: 25px;
+                        margin: 20px 0;
+                    }
+                    ul{
+                        flex-direction: column;
+                        .store-logo{
+                            margin: 5px 0;
+                                img{
+                                    width: 80%;
+                                }
+                        }
+                    }
+                }
+            }
+            .contact-form{
+                display: none;
+            }
+            .contact-address{
+                text-align: center;
+                .title{
+                    margin: 15px 0;
+                }
+                .email{
+                    font-size: 13px;
+                }
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 40px;
+                    line-height: 3;
+                    .social-link{
+                        margin: 0 10px;
+                        a{
+                            color: $clr-white;
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .copyright{
+                    display: block;
+                    margin-bottom: 30px;
+
                 }
             }
         }
