@@ -106,7 +106,7 @@ const Home = () => {
 
                    {/* single article */}
                    <article className="single-dezy">
-                       <aside className="left">
+                       <aside className="left creativity">
                            <h1 className="dezy-title">Creativity</h1>
                            <p className="dezy-text">
                            Design Sprints are a great way to quickly innovate.

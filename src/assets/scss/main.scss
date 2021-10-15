@@ -395,3 +395,181 @@ p{
         }
     }
 }
+
+// Media Queries
+@media screen and (min-width: $breakpoint-sm){
+    .main{
+        header{
+            .navbar{
+                .logo{
+                    .logo-img{
+                        max-width: 15%;
+                    }
+                }
+            }
+        }
+        .main-content{
+            .hero{
+                padding: 10px 60px;
+                .content{
+                    padding-top: 80px;
+                }
+            }
+            .design-sprint{
+               max-width: 75%;
+               margin: 0 auto;
+               padding-bottom: 60px;
+            }
+            .our-product{
+               padding: 20px 60px;
+               padding-bottom: 40px;
+            }
+            .why-dezy-it{
+                padding: 40px;
+            }
+            .blog{
+                padding: 60px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-md){
+    p{
+        font-size: 13px;
+    }
+    .main{
+        .main-content{
+            .hero{
+                padding: 20px 60px;
+                .content{
+                    width: 60%;
+                    margin: 0 auto;
+                    .left-aside{
+                        article{
+                            .title{
+                                h1{
+                                    font-size: 20px;
+                                }
+                                p{
+                                    font-size: 14px;
+                                }
+                            }
+                            .iphone-animate{
+                                text-align: center;
+                                img{
+                                    width: 80%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .design-sprint{
+               max-width: 90%;
+               display: grid;
+               grid-template-columns: 1fr 300px;
+               margin: initial;
+               margin: 60px 0;
+               .right{
+                   margin-left: 20px;
+                   h1,p{
+                    text-align: left;
+                   }
+               }
+            }
+            .our-product{
+               padding: 20px 200px;
+               .product-images{
+                   .gallery-2{
+                       .iphone-animate{
+                           text-align: center;
+                           img{
+                               width: 80%;
+                           }
+                       }
+                   }
+               }
+            }
+            .why-dezy-it{
+                padding: 0;
+                .why-wrapper{
+                    width: 80%;
+                    margin: 0 auto;
+                    .single-dezy{
+                       display: grid;
+                       grid-template-columns: 300px 1fr;
+                       margin: 10px 0;
+                       .right{
+                           order: 1;
+                           margin-left: 50px;
+                           img{
+                            width: 300px;
+                            height: 340px;
+                            object-fit: cover;
+                        }
+                       }
+                       .left{
+                           align-self: center;
+                           .dezy-title{
+                               font-size: 18px;
+                               text-align: initial;
+                               &::before{
+                                left: 33%;
+                                height: 3px;
+                                bottom: -12px;
+                                width: 200px;
+                               }
+                           }
+                           .dezy-text{
+                               text-align: initial;
+                               font-size: 13px;
+                           }
+                       }
+                       &:nth-child(even){
+                           .right {
+                            order: 0;
+                            margin-left: -40px;
+                           }
+                           .left{
+                               order: 1;
+                               width: 280px;
+                               margin-left: 20px;
+                               .dezy-title{
+                                   &::before{
+                                    left: 36%;
+                                   }
+                               }
+                           }
+                       }
+                    }
+                }
+            }
+            .blog{
+                padding: 20px;
+                padding-bottom: 80px;
+                .posts{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 1rem;
+                    padding-bottom: 20px;
+                    .single-post{
+                        margin: 10px 0;
+                        .post-content{
+                            .posted{
+                                font-size: 12px;
+                            }
+                            .post-title{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+                .pagination{
+                    width: 60%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
