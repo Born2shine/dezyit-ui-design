@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Spinnaker&display=swap");
+.color-primary-5 {
+  color: #302b70 !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.active {
+  color: #302b70 !important;
+}
+
+.show-nav {
+  -webkit-transform: translate(0) !important;
+          transform: translate(0) !important;
+}
+
+body {
+  font-family: 'Spinnaker', sans-serif;
+}
+
+.download-app {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.download-app h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.download-app p {
+  line-height: 3;
+  color: #302b70;
+}
+
+.download-app ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1, p {
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.5;
+  margin-top: 15px;
+  font-weight: normal;
+}
+
+.main header .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #302b70;
+  padding: 10px;
+  position: fixed;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  z-index: 1;
+}
+
+.main header .navbar .logo .logo-img {
+  width: 25%;
+}
+
+.main header .navbar .links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  background: rgba(255, 255, 255, 0.95);
+  height: 100vh;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main header .navbar .links .link {
+  margin: 32px 0;
+}
+
+.main header .navbar .links .link a {
+  font-size: 22px;
+  font-weight: bold;
+  color: #787Cd1;
+}
+
+.main header .navbar .toggle-navbar {
+  margin-right: 6%;
+  margin-top: 6px;
+  z-index: 1000;
+}
+
+.main header .navbar .toggle-navbar input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+.main header .navbar .toggle-navbar input[type="checkbox"]:checked ~ .bars .middle, .main header .navbar .toggle-navbar input[type="checkbox"]:checked ~ .bars .top, .main header .navbar .toggle-navbar input[type="checkbox"]:checked ~ .bars .bottom {
+  background: #302b70;
+}
+
+.main header .navbar .toggle-navbar input[type="checkbox"]:checked ~ .bars .top {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 9px;
+}
+
+.main header .navbar .toggle-navbar input[type="checkbox"]:checked ~ .bars .middle {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 4px;
+  right: -2px;
+}
+
+.main header .navbar .toggle-navbar input[type="checkbox"]:checked ~ .bars .bottom {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  top: 14px;
+  left: -2px;
+}
+
+.main header .navbar .toggle-navbar input[type="checkbox"]:checked ~ .links {
+  -webkit-transform: translate(0) !important;
+          transform: translate(0) !important;
+}
+
+.main header .navbar .toggle-navbar .bars {
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main header .navbar .toggle-navbar .bars .middle, .main header .navbar .toggle-navbar .bars .top, .main header .navbar .toggle-navbar .bars .bottom {
+  height: 3px;
+  width: 30px;
+  background: #fff;
+  border-radius: 50px;
+  position: absolute;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.main header .navbar .toggle-navbar .bars .middle {
+  right: 0;
+  width: 15px;
+}
+
+.main header .navbar .toggle-navbar .bars .top {
+  top: 11px;
+}
+
+.main header .navbar .toggle-navbar .bars .bottom {
+  top: 22px;
+  width: 15px;
+  left: 0;
+}
+
+.main .main-content .hero {
+  background: url("../images/bg/bg-1.png") center/cover no-repeat;
+  padding: 25px;
+}
+
+.main .main-content .hero .content {
+  padding-top: 55px;
+}
+
+.main .main-content .hero .content .left-aside article .title {
+  color: #fff;
+  text-align: center;
+}
+
+.main .main-content .hero .content .left-aside article .title h1 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.main .main-content .hero .content .left-aside article .title p {
+  line-height: 4;
+  font-size: 18px;
+}
+
+.main .main-content .hero .content .right-aside {
+  display: none;
+}
+
+.main .main-content .design-sprint {
+  padding: 20px;
+}
+
+.main .main-content .design-sprint .right p {
+  color: #302b70;
+}
+
+.main .main-content .our-product {
+  padding: 20px;
+  background: url("https://static.wixstatic.com/media/ec9816_6cad91bd1e0e48f19fb000611fe63bb7~mv2.png/v1/fill/w_1075,h_768,al_c,q_95/ec9816_6cad91bd1e0e48f19fb000611fe63bb7~mv2.webp") center/cover no-repeat;
+}
+
+.main .main-content .our-product .title {
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+.main .main-content .our-product .title .gallery-1, .main .main-content .our-product .title .gallery-3 {
+  display: none;
+}
+
+.main .main-content .our-product .download-app p {
+  line-height: 0;
+}
+
+.main .main-content .why-dezy-it {
+  margin: 60px 0;
+  padding: 20px;
+}
+
+.main .main-content .why-dezy-it h1 {
+  color: #302b70;
+}
+
+.main .main-content .why-dezy-it .why-wrapper {
+  margin-top: 30px;
+}
+
+.main .main-content .why-dezy-it .why-wrapper .single-dezy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .main-content .why-dezy-it .why-wrapper .single-dezy .left .dezy-title {
+  position: relative;
+  font-size: 25px;
+  color: #302b70;
+}
+
+.main .main-content .why-dezy-it .why-wrapper .single-dezy .left .dezy-title::before {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 3.5px;
+  background: #787Cd1;
+  bottom: -15px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.main .main-content .why-dezy-it .why-wrapper .single-dezy .left .dezy-text {
+  font-size: 14px;
+  color: #302b70;
+  margin-top: 35px;
+}
+
+.main .main-content .why-dezy-it .why-wrapper .single-dezy .right {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.main .main-content .blog {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))), url("../images/bg/bg-1.png") center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/bg/bg-1.png") center/cover no-repeat;
+  padding: 24px;
+}
+
+.main .main-content .blog h1 {
+  color: #fff;
+  margin: 25px 0;
+  font-size: 35px;
+}
+
+.main .main-content .blog .posts .single-post {
+  background: #fff;
+  margin: 40px 0;
+}
+
+.main .main-content .blog .posts .single-post .post-content {
+  padding: 24px;
+  margin: 15px 0;
+  color: #303030;
+}
+
+.main .main-content .blog .posts .single-post .post-content .posted {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #9e9e9e;
+}
+
+.main .main-content .blog .posts .single-post .post-content .posted li .dot {
+  margin-left: 4px;
+}
+
+.main .main-content .blog .posts .single-post .post-content .posted li .time {
+  font-size: 13px;
+}
+
+.main .main-content .blog .posts .single-post .post-content .post-title {
+  font-weight: normal;
+  font-size: 20px;
+  margin: 20px 0;
+  width: 90%;
+}
+
+.main .main-content .blog .posts .single-post .post-content .post-body {
+  text-align: left;
+  color: #9e9e9e;
+}

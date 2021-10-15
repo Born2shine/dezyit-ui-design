@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Spinnaker&display=swap');
+@import 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// General styles
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+li{
+    list-style: none;
+}
+img{
+    width: 100%;
+}
+.active{
+    color: $clr-primary-5 !important;
+}
+.show-nav{
+    transform: translate(0) !important;
+}
+body{
+    font-family: 'Spinnaker', sans-serif;
+}
+
+.download-app{
+    text-align: center;
+    margin: 25px 0;
+    h4{
+        color: $clr-white;
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    p{
+        line-height: 3;
+        color: $clr-primary-5
+    }
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+
+    }
+}
+
+
+h1,p{
+    text-align: center;
+}
+h1{
+    font-size: 30px;
+    font-weight: 400;
+    
+}
+p{
+    line-height: 1.5;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.main{
+    header{
+        .navbar{
+            display: flex;
+            background: $clr-primary-5;
+            padding: 10px;
+            position: fixed;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            z-index: 1;
+            .logo{
+                .logo-img{
+                    width: 25%;
+                }
+            }
+            .links{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transition: $transition;
+                background: rgba($clr-white, .95);
+                height: 100vh;
+                transform: translateX(100%);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                .link{
+                    margin: 32px 0;
+                    a{
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: $clr-primary-2;
+                    }
+                }
+            }
+            .toggle-navbar{
+                margin-right: 6%;
+                margin-top: 6px;
+                z-index: 1000;
+                input[type="checkbox"]{
+                    appearance: none;
+                    visibility: hidden;
+                    display: none;
+                    &:checked ~ {
+                        .bars{
+                            .middle, .top, .bottom{
+                                background: $clr-primary-5
+                            }
+                            .top{
+                                transform: rotate(-45deg);
+                                top: 9px;
+                            }
+                            .middle{
+                                transform: rotate(45deg);
+                                top: 4px;
+                                right: -2px;
+                            }
+                            .bottom{
+                                transform: rotate(-135deg);
+                                top: 14px;
+                                left: -2px;
+                            }
+                        }
+                        .links{
+                            transform: translate(0) !important;
+                        }
+                    }
+                }
+                .bars{
+                    position: relative;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    .middle, .top, .bottom{
+                        height: 3px;
+                        width: 30px;
+                        background: $clr-white;
+                        border-radius: 50px;
+                        position: absolute;
+                        transition: .3s ease;
+                    }
+                    .middle{
+                        right: 0;
+                        width: 15px;
+                    }
+                    .top{
+                        top: 11px;
+                    }
+                    .bottom{
+                        top: 22px;
+                        width: 15px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+    .main-content{
+        .hero{
+            background: url("../images/bg/bg-1.png") center/cover no-repeat;
+            padding: 25px;
+           .content{
+               padding-top: 55px;
+                .left-aside{
+                    article{
+                        .title{
+                            color: $clr-white;
+                            text-align: center;
+                            h1{
+                                font-size: 30px;
+                                font-weight: 500;
+                                line-height: 1;
+                            }
+                            p{
+                                line-height: 4;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+                .right-aside{
+                    display: none;
+                }
+           }
+        }
+        .design-sprint{
+            padding: 20px;
+            .right{
+                p{
+                    color: $clr-primary-5;
+                }
+            }
+        }
+        .our-product{
+            padding: 20px;
+            background: url("https://static.wixstatic.com/media/ec9816_6cad91bd1e0e48f19fb000611fe63bb7~mv2.png/v1/fill/w_1075,h_768,al_c,q_95/ec9816_6cad91bd1e0e48f19fb000611fe63bb7~mv2.webp") center/cover no-repeat;
+           .title {
+                color: $clr-white;
+                margin-top: 30px;
+                margin-bottom: 35px;
+                .gallery-1,.gallery-3{
+                    display: none;
+                }
+           }
+           .download-app{
+               p{
+                   line-height: 0;
+               }
+           }
+        }
+        .why-dezy-it{
+            margin: 60px 0;
+            padding: 20px;
+            h1{
+                color: $clr-primary-5;
+            }
+            .why-wrapper{
+                margin-top: 30px;
+                .single-dezy{
+                    display: flex;
+                    flex-direction: column;
+                    .left{
+                        .dezy-title{
+                            position: relative;
+                            font-size: 25px;
+                            color: $clr-primary-5;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                width: 250px;
+                                height: 3.5px;
+                                background: $clr-primary-2;
+                                bottom: -15px;
+                                left: 50%;
+                                transform: translate(-50%);
+                            }
+                        }
+                        .dezy-text{
+                            font-size: 14px;
+                            color: $clr-primary-5;
+                            margin-top: 35px;
+                        }
+                    }
+                    .right{
+                        order: -1;
+                    }
+                }
+            }
+        }
+
+        .blog{
+            background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)) , url("../images/bg/bg-1.png") center/cover no-repeat;
+            padding: 24px;
+            h1{
+                color: $clr-white;
+                margin: 25px 0;
+                font-size: 35px;
+            }
+            .posts{
+                .single-post{
+                    background: $clr-white;
+                    margin: 40px 0;
+                    .post-content{
+                        padding: 24px;
+                        margin: 15px 0;
+                        color : $clr-grey-2;
+                        .posted{
+                            display: flex;
+                            color: $clr-grey-3;
+                            li{
+                                .dot{
+                                    margin-left: 4px;
+                                }
+                                .time{
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                        .post-title{
+                            font-weight: normal;
+                            font-size: 20px;
+                           margin: 20px 0;
+                           width: 90%;
+                        }
+                        .post-body{
+                            text-align: left;
+                            color: $clr-grey-3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
