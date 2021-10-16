@@ -1,4 +1,5 @@
-import { BiSearch } from "react-icons/bi"
+import { BiSearch, BiDotsVerticalRounded } from "react-icons/bi"
+import { RiShareForwardLine } from "react-icons/ri"
 import { IoIosArrowRoundBack, IoMdClose } from "react-icons/io"
 
 import playstore from "../../assets/images/google-play-store.png"
@@ -7,10 +8,11 @@ import { useState } from "react"
 
 const AllPost = () => {
     const [showSearch, setShowSearch] = useState(false)
+    const [showShare, setShowShare] = useState(false)
 
     return (
-        <section className="main-content blog">
-            <div className="posts">
+        <section className="main-content blog-section">
+            <div className="post-wrapper">
                 <div className="header">
                     <div className="left">
                        <span className="title">  Blogs </span>
@@ -23,7 +25,11 @@ const AllPost = () => {
                     </div>
                     <div className="right">
                         <div className="search-icon" onClick={() => setShowSearch(!showSearch)}>
-                            <BiSearch/>
+                            {
+                                !showSearch && (
+                                    <BiSearch/>
+                                )
+                            }
                         </div>
                         {
                             showSearch && (
@@ -34,7 +40,7 @@ const AllPost = () => {
                                 </div>
                                 <div className="search-icon"> <BiSearch/> </div>
                                 <input type="text" placeholder="Search"/>
-                                <div className="close-search"> <IoMdClose/> </div>
+                                <div className="close-search" onClick={() => setShowSearch(!showSearch)}> <IoMdClose/> </div>
                             </div>
                             <div className="search-info">
                                 <h2>Looking for Something</h2>
@@ -59,6 +65,120 @@ const AllPost = () => {
                     </div>
                 </div>
             </div>
+            <section className="blog">
+            <div className="posts">
+                {/* single post */}
+                <article className="single-post">
+                    <img className="post-img" src="https://static.wixstatic.com/media/f5b934_eafc2af0a60843368d025c6cc41ba074~mv2.jpg/v1/fill/w_454,h_243,fp_0.50_0.50,q_90/f5b934_eafc2af0a60843368d025c6cc41ba074~mv2.webp" alt="post-img" />
+                    <div className="post-content">
+                            <div className="posted">
+                                <li>17 <span className="time">hours ago </span></li>
+                                <li> <span className="dot"></span></li>
+                                <li>2 <span className="time">min</span></li>
+                                <div className="share" onClick={() => setShowShare(!showShare)}>
+                                    <div className="share-btn">
+                                        <BiDotsVerticalRounded/>
+                                    </div>
+                                </div>
+                                    {
+                                        showShare && (
+                                            <div className="link">
+                                                <ul>
+                                                    <li>  <RiShareForwardLine/></li>
+                                                    <li> Share Post</li>
+                                                </ul>
+                                            
+                                            </div>
+                                        )
+                                    }
+                            </div>
+                            <h4 className="post-title">
+                                Role of Product Management in Design Thinking
+                            </h4>
+                            <p className="post-body">
+                            Design thinking is an integral part of product development and management. 
+                            Design thinking focuses on the user's needs, aspirations
+                            </p>
+                        </div>  
+                </article>
+                {/* end single post */}
+
+                {/* single post */}
+                <article className="single-post">
+                    <img className="post-img" src="https://static.wixstatic.com/media/f5b934_4ac1f88e94ba4d96bb3d31095dd64804~mv2.jpeg/v1/fill/w_454,h_243,fp_0.50_0.50,q_90/f5b934_4ac1f88e94ba4d96bb3d31095dd64804~mv2.webp" alt="post-img" />
+                    <div className="post-content">
+                            <div className="posted">
+                                <li>Oct 5 <span className="time"> </span></li>
+                                <li> <span className="dot"></span></li>
+                                <li>3 <span className="time">min</span></li>
+                                <div className="share">
+                                    <div className="share-btn">
+                                        <BiDotsVerticalRounded/>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 className="post-title">
+                                5 Ways To Improve Design Research
+                            </h4>
+                            <p className="post-body">
+                            In the design industry, you have to deal with several clients, companies, 
+                            and organisations with versatile ideas, beliefs, work ethics
+                            </p>
+                        </div>  
+                </article>
+                {/* end single post */}
+
+                {/* single post */}
+                <article className="single-post">
+                    <img className="post-img" src="https://static.wixstatic.com/media/f5b934_a8800a70ab4741d9bb53bcce7973f37e~mv2.jpg/v1/fill/w_454,h_243,fp_0.50_0.50,q_90/f5b934_a8800a70ab4741d9bb53bcce7973f37e~mv2.webp" alt="post-img" />
+                    <div className="post-content">
+                            <div className="posted">
+                                <li>Sept 30 <span className="time"> </span></li>
+                                <li> <span className="dot"></span></li>
+                                <li>3 <span className="time">min</span></li>
+                                <div className="share">
+                                    <div className="share-btn">
+                                        <BiDotsVerticalRounded/>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 className="post-title">
+                                How UX design can help your app
+                            </h4>
+                            <p className="post-body">
+                            An app, these days, is a crucial technology for any product or
+                             service company to connect with their clients. There are multiple things
+                            </p>
+                        </div>  
+                </article>
+                {/* end single post */}
+
+                {/* single post */}
+                <article className="single-post">
+                    <img className="post-img" src="https://static.wixstatic.com/media/f5b934_b2466828d4394a7290813cdb96a0f97b~mv2.jpg/v1/fill/w_454,h_243,fp_0.50_0.50,q_90/f5b934_b2466828d4394a7290813cdb96a0f97b~mv2.webp" alt="post-img" />
+                    <div className="post-content">
+                            <div className="posted">
+                                <li>Sept 25 <span className="time"> </span></li>
+                                <li> <span className="dot"></span></li>
+                                <li>3 <span className="time">min</span></li>
+                                <div className="share">
+                                    <div className="share-btn">
+                                        <BiDotsVerticalRounded/>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 className="post-title">
+                            Ways you can promote yourself on social media
+                            </h4>
+                            <p className="post-body">
+                            Nowadays, social media has become one of the topmost platforms
+                             to promote and market your artwork, design, creativity and grow your
+                            </p>
+                        </div>  
+                </article>
+                {/* end single post */}
+            </div>
+            </section>
             <div className="hero">
                <div className="content">
                <aside className="left-aside">

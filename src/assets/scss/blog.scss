@@ -1,7 +1,7 @@
 @import 'variables';
 
-.blog{
-    .posts{
+.blog-section{
+    .post-wrapper{
         .header{
             padding: 20px;
             padding-top: 5rem;
@@ -27,6 +27,7 @@
                    width: 100%;
                    background: $clr-white;
                    height: 100vh;
+                   z-index: 1;
                    .search-form{
                        display: flex;
                        background: $clr-primary-5;
@@ -35,11 +36,13 @@
                        .arrow-left{
                            font-size: 20px;
                            margin-right: 15px;
+                           cursor: pointer;
                        }
                        .search-icon{
                            position: absolute;
                            left: 50px;
                            bottom: 25px;
+                           cursor: pointer;
                        }
                         input{
                             background: none;
@@ -66,6 +69,7 @@
                             position: absolute;
                             right: 22px;
                             bottom: 25px;
+                            cursor: pointer;
                         }
                     }
                     .search-info{
@@ -86,6 +90,185 @@
         }
         .sort-by{
             padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            .filter{
+                form{
+                    select{
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+    .blog{
+        background: none !important;
+        padding: 0 !important;
+        .posts{
+            .single-post{
+                .post-img{
+                    display: block;
+                }
+                .post-content{
+                    position: relative;
+                   &::after{
+                    position: absolute;
+                    height: .5px;
+                    width: 80%;
+                    background: $clr-grey-1;
+                    content: "";
+                    bottom: 2px;
+                   }
+                   .posted{
+                       position: relative;
+                       .share{
+                           position: absolute;
+                           right: 0;
+                           .share-btn{
+                               font-size: 22px;
+                               color: $clr-grey;
+                               cursor: pointer;
+                           }
+                        }
+                        .link{
+                            position: absolute;
+                            right: 30px;
+                            top: 30px;
+                            background: $clr-white;
+                            box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+                            padding: 15px 45px;
+                            font-size: 18px;
+                            color: $clr-grey;
+                            cursor: pointer;
+                            ul{
+                                display: flex;
+                                li{
+                                    margin: 0 5px;
+                                }
+                            }
+                        }
+                   }
+                   .post-title{
+                       color: $clr-primary-2;
+                       font-size: 25px !important;
+                       line-height: 1.5;
+                       font-weight: 600 !important;
+                   }
+                }
+            }
+        }
+    }
+}
+
+// Media Queries
+@media screen and (min-width: $breakpoint-sm) {
+    .blog-section{
+        .blog{
+            .posts{
+               max-width: 90%;
+               margin: 0 auto;
+               .single-post{
+                   .post-content{
+                       border: 1px solid $clr-grey-1;
+                       margin: 0;
+                       &::after{
+                           display: none;
+                       }
+                   }
+               }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+    .blog-section{
+        .blog{
+            .posts{
+               max-width: 90%;
+               grid-template-columns: 1fr 1fr !important;
+               .single-post{
+                   .post-content{
+                       .post-body{
+                           padding-bottom: 40px;
+                           font-size: 14px;
+                       }
+                   }
+               }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+    .blog-section{
+        .post-wrapper{
+            .header{
+                background: none;
+                padding-top: 7rem;
+                width: 90%;
+                margin: 0 auto;
+                .left{
+                    .title{
+                        display: none;
+                    }
+                    ul{
+                        display: block;
+                        li{
+                            display: inline-block;
+                            margin: 0 15px;
+                            a{
+                                color: $clr-grey;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .right{
+                    color: $clr-grey;
+                    .search-icon{
+                        cursor: pointer;
+                    }
+                    .search-wrapper{
+                        background: none;
+                        .search-form{
+                            background: none;
+                            position: absolute;
+                            right: 5%;
+                            top: 4%;
+                            input{
+                                border-bottom: 1px solid $clr-grey;
+                                color: $clr-grey;
+                            }
+                            .arrow-left{
+                                visibility: hidden;
+                            }
+                            .close-search{
+                                display: block;
+                            }
+                        }
+                        .search-info{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .sort-by{
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-xl) {
+    .blog-section{
+        .post-wrapper{
+            .header{
+                width: 70%;
+                .right{
+                    
+                }
+            }
         }
     }
 }

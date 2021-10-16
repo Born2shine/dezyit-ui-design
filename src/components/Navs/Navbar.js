@@ -12,7 +12,8 @@ const Navbar = () => {
             <img className="logo-img" src={logo} alt="dezy-logo" />
           </div>
             <ul className={`links ${isMenuBarOpen ? 'show-nav' : ''} animate__animated`}>
-              <li className="link"><a className="active" href="#home">Home</a></li>
+              {/* <li className="link"><a className="active" href="#home">Home</a></li> */}
+              <li className="link"> <Link to="/"> Home </Link> </li>
               <li className="link"><a href="#product">Our Product</a></li>
               <li className="link"><a href="#why-us">Why Us?</a></li>
               <li className="link"> <Link to="/blog"> Blogs </Link> </li>
