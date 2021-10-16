@@ -11,7 +11,7 @@ const AllPost = () => {
     const [showShare, setShowShare] = useState(false)
 
     return (
-        <section className="main-content blog-section">
+        <section className="main-content blog-section" id="blogs">
             <div className="post-wrapper">
                 <div className="header">
                     <div className="left">
