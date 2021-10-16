@@ -404,6 +404,16 @@ p{
             }
         }
     }
+    .scroll_top{
+        position: fixed;
+        background: $clr-primary-2;
+        border: 1px solid $clr-white;
+        padding: 15px 18px;
+        color: $clr-white;
+        border-radius: 50%;
+        bottom: 15%;
+        right: 8%;
+    }
 }
 
 // Media Queries

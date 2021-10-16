@@ -503,6 +503,17 @@ p {
   margin-bottom: 30px;
 }
 
+.main .scroll_top {
+  position: fixed;
+  background: #787Cd1;
+  border: 1px solid #fff;
+  padding: 15px 18px;
+  color: #fff;
+  border-radius: 50%;
+  bottom: 15%;
+  right: 8%;
+}
+
 @media screen and (min-width: 540px) {
   .main header .navbar .logo .logo-img {
     max-width: 15%;
