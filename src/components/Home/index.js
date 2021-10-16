@@ -37,6 +37,7 @@ const Home = () => {
                </aside>
                </div>
            </div>
+           
            <section className="design-sprint">
                <article className="left">
                    <img src="https://static.wixstatic.com/media/ec9816_120f89a1570549e882031fbfb5ee5905~mv2.png/v1/fill/w_600,h_450,al_c,q_95/Design%20Sprint%20-%20Design%20Thinking%20-%20Graphi.webp" alt="design-sprint" />

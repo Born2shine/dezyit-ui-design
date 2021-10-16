@@ -1,5 +1,6 @@
 import logo from "../../assets/images/logo.gif"
 import { useState } from 'react'
+import { Link } from "react-router-dom"
 import 'animate.css';
 
 const Navbar = () => {
@@ -14,7 +15,8 @@ const Navbar = () => {
               <li className="link"><a className="active" href="#home">Home</a></li>
               <li className="link"><a href="#product">Our Product</a></li>
               <li className="link"><a href="#why-us">Why Us?</a></li>
-              <li className="link"><a href="#blogs">Blogs</a></li>
+              <li className="link"> <Link to="/blog"> Blogs </Link> </li>
+              {/* <li className="link"><a href="#blogs">Blogs</a></li> */}
               <li className="link"><a href="#contact">Contact</a></li>
             </ul>
             <label className="toggle-navbar">
