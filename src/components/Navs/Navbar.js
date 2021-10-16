@@ -18,7 +18,7 @@ const Navbar = () => {
           </div>
             <ul className={`links ${isMenuBarOpen ? 'show-nav' : ''} animate__animated`}>
             {
-                location.pathname === '/' ? (
+                location.pathname === '/' || location.pathname === '/blog#blogs' ? (
                   <li className="link"><a className="active" href="#home">Home</a></li>
                   ) : (
                     <li className="link"> <Link to="/"> Home </Link> </li>
@@ -27,7 +27,9 @@ const Navbar = () => {
               <li className="link"><a href="#product">Our Product</a></li>
               <li className="link"><a href="#why-us">Why Us?</a></li>
               {
-                location.pathname === '/blog' ||  location.pathname === '/#home' ? (
+                location.pathname === '/blog' ||  location.pathname === '/#home' ||
+                location.pathname === '/'
+                ? (
                   <li className="link"><a href="#blogs">Blogs</a></li> 
                 ) : (
                   <li className="link"> <Link to="/blog"> Blogs </Link> </li>
