@@ -19,7 +19,7 @@ function App() {
               <Route exact path="/"> <Home/> </Route>
             </Switch>
         </Router>
-        <footer>
+        <footer id="contact">
           <div className="footer-wrapper">
             <article className="contact-form">
               <h1 className="title">Reach out to us</h1>
@@ -35,7 +35,10 @@ function App() {
                     <input type="text" placeholder="Phone"/>
                   </div>
                   <div className="form-group">
-                    <textarea cols="30" rows="10" placeholder="type your message here"></textarea>
+                    <textarea cols="30" rows="8" placeholder="Type your message here"></textarea>
+                  </div>
+                  <div className="btn">
+                    <button className="submit-btn">Submit</button>
                   </div>
                 </form>
               </div>

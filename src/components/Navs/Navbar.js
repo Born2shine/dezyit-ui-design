@@ -18,7 +18,7 @@ const Navbar = () => {
               <li className="link"><a href="#contact">Contact</a></li>
             </ul>
             <label className="toggle-navbar">
-              <input type="checkbox" onChange={(e) => setIsMenuBarOpen(e.target.checked) } />
+              <input type="checkbox" id="menu-check" onChange={(e) => setIsMenuBarOpen(e.target.checked) } />
               <div className='bars'>
                 <span className="top"></span>
                 <span className="middle"></span>

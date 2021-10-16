@@ -24,6 +24,9 @@ img{
 .show-nav{
     transform: translate(0) !important;
 }
+.hide-nav{
+    transform: translateX(100%) !important;
+}
 body{
     font-family: 'Spinnaker', sans-serif;
 }
@@ -104,6 +107,10 @@ p{
                         font-size: 22px;
                         font-weight: bold;
                         color: $clr-primary-2;
+                        transition: $transition;
+                        &:hover{
+                            color: $clr-secondary;
+                        }
                     }
                 }
             }
@@ -221,10 +228,12 @@ p{
                 p{
                     line-height: 1.7;
                 }
-                .gallery-1,.gallery-3{
+            }
+            .product-images{
+                .gallery-1, .gallery-3{
                     display: none;
                 }
-           }
+            }
            .download-app{
                p{
                    line-height: 0;
@@ -320,6 +329,7 @@ p{
                     .navigator{
                         color: $clr-grey-2;
                         font-size: 18px;
+                        cursor: pointer;
                     }
                     .disabled{
                         color: $clr-grey;
@@ -486,9 +496,9 @@ p{
                            text-align: center;
                            img{
                                width: 80%;
-                           }
-                       }
-                   }
+                            }
+                        }
+                    }
                }
             }
             .why-dezy-it{
@@ -568,6 +578,407 @@ p{
                 .pagination{
                     width: 60%;
                     margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-lg){
+    .main{
+        header{
+            .navbar{
+                display: grid;
+                grid-template-columns: 300px 1fr;
+                padding: 20px;
+                .logo{
+                    width: 500px;
+                    margin-left: 100px;
+                    .logo-img{
+                        width: 100%;
+                    }
+                }
+                .links {
+                    display: initial;
+                    background: none;
+                    position: initial;
+                    height: initial;
+                    width: 600px;
+                    transform: translate(0);
+                    .link{
+                        display: inline-block;
+                        margin: 10px 0;
+                        padding: 0 25px;
+                        a{
+                            font-size: 16px;
+                            color: $clr-white;
+                        }
+                        .active{
+                            color: $clr-secondary !important;
+                        }
+                    }
+
+                }
+                .toggle-navbar{
+                    display: none;
+                }
+            }
+        }
+        .main-content{
+            .hero{
+                position: relative;
+                min-height: 90vh;
+                .content{
+                    display: grid;
+                    grid-template-columns: 1fr 250px;
+                    width: 80%;
+                    max-width: 80%;
+                    margin-top: 30px;
+                    .left-aside{
+                        margin-top: 40px;
+                        article{
+                            .title{
+                                h1{
+                                    font-size: 35px;
+                                    line-height: 1.2;
+                                }
+                                p{
+                                    font-size: 18px;
+                                }
+                               h1,p{
+                                text-align: left;
+                               }
+                            }
+                            .iphone-animate{
+                                display: none;
+                            }
+                            .download-app{
+                                text-align: left;
+                                margin-top: 40px;
+                                p{
+                                    text-align: left;
+                                }
+                                ul{
+                                    justify-content: initial;
+                                    align-items: initial;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    .right-aside{
+                        display: block;
+                        .iphone-animate{
+                            position: absolute;
+                            img{
+                                height: 460px;
+                            }
+                        }
+                    }
+                }
+            }
+            .design-sprint{
+               .right{
+                   align-self: center;
+                   h1{
+                       color: $clr-primary-5;
+                       font-size: 35px;
+                   }
+               }
+            }
+            .our-product{
+                padding: 20px 20px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                .title{
+                    h1{
+                        font-size: 35px;
+                    }
+                    p{
+                        width: 60%;
+                        margin: 0 auto;
+                        padding: 20px 0;
+                    }
+                }
+                .product-images{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    width: 80%;
+                    margin: 0 auto;
+                    .gallery-1, .gallery-3{
+                        display: block;
+                    }
+                }
+                .download-app{
+                    margin-top: 40px;
+                    h4{
+                        font-size: 20px;
+                    }
+                    p{
+                        color: $clr-primary-2;
+                        margin: 20px 0;
+                        font-size: 16px;
+                    }
+                    ul{
+                        width: 30%;
+                    }
+                }
+            }
+            .why-dezy-it{
+                .why-wrapper{
+                    .single-dezy{
+                        &:nth-child(1){
+                            .right{
+                                justify-self: center;
+                            }
+                        }
+                        &:nth-child(2){
+                            .left{
+                                justify-self: center;
+                            }
+                        }
+                        &:nth-child(3){
+                            .right{
+                                justify-self: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .blog{
+                .posts{
+                    padding: 30px;
+                }
+                .pagination{
+                    width: 40%;
+                }
+            }
+        }
+        footer{
+            .footer-wrapper{
+                display: grid;
+                grid-template-columns: 1fr .8fr .7fr;
+                width: 95%;
+                margin: 0 auto;
+                padding: 40px 0;
+                .contact-form{
+                    display: block;
+                    .title{
+                        text-align: left;
+                        margin-bottom: 10px;
+                    }
+                    .form-container{
+                        form{
+                            .form-group{
+                                margin: 15px 0;
+                                input, textarea{
+                                    background: none;
+                                    border: none;
+                                    border-bottom: 1px solid $clr-white;
+                                    font-family: inherit;
+                                    padding: 5px;
+                                    width: 90%;
+                                    color: $clr-white;
+                                    &::placeholder{
+                                        color: $clr-white
+                                    }
+                                    &:focus{
+                                        outline: none;
+                                    }
+                                    &:hover{
+                                        border-bottom: 2px solid $clr-white;
+                                    }
+                                }
+                            }
+                            .btn{
+                                text-align: right;
+                                .submit-btn{
+                                    background: none;
+                                    border: 1px solid $clr-white;
+                                    border: 1px solid $clr-white;
+                                    border-radius: 5px;
+                                    font-family: inherit;
+                                    padding: 5px 20px;
+                                    color: $clr-white;
+                                    margin-right: 10%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .quick-links{
+                    .about{
+                        display: block;
+                        .title{
+                            text-align: center;
+                            margin-bottom: 10px;
+                        }
+                        ul{
+                            text-align: center;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            .link{
+                                border: 1px solid $clr-white;
+                                padding: 3px 0;
+                                width: 170px;
+                                margin: 10px 0;
+                                border-radius: 5px;
+                                a{
+                                    color: $clr-white;
+                                }
+                            }
+                        }
+                    }
+                    .download-app{
+                        margin-top: 120px;
+                        ul{
+                            flex-direction: row;
+                            width: 90%;
+                        }
+                    }
+                }
+                .contact-address{
+                    text-align: left;
+                    .title{
+                        margin-top: 0;
+                        text-align: left;
+                    }
+                    .email{
+                        text-align: left;
+
+                    }
+                    ul{
+                        justify-content: initial;
+                        margin-top: 0;
+                        .social-link{
+                            margin: 0;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $breakpoint-xl){
+    .main{
+        header{
+            .navbar{
+                .logo{
+                    margin-left: 180px;
+                }
+                .links  {
+                    margin-left: 280px;
+                }
+            }
+        }
+        .main-content{
+            .hero{
+                min-height: 100vh;
+                .content{
+                    width: 70%;
+                    .left-aside{
+                        article{
+                            .title{
+                                h1{
+                                    font-size: 50px;
+                                }
+                                p{
+                                    font-size: 18px;
+                                }
+                            }
+                            .download-app{
+                                h4{
+                                    font-size: 24px;
+                                }
+                                p{
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                    .right-aside{
+                        .iphone-animate{
+                            img{
+                                height: 560px;
+                            }
+                        }
+                    }
+                }
+            }
+            .design-sprint{
+                width: 70%;
+                grid-template-columns: 1fr 380px;
+                margin: 0 auto;
+                margin-top: 60px;
+                .right{
+                    h1{
+                        font-size: 45px;
+                    }
+                }
+            }
+            .our-product{
+                .title{
+                    h1{
+                        font-size: 50px;
+                    }
+                    p{
+                        width: 40%;
+                    }
+                }
+                .product-images{
+                    width: 70%;
+                }
+            }
+            .why-dezy-it{
+                h1{
+                    font-size: 50px;
+                }
+                .why-wrapper{
+                    width: 60%;
+                    .single-dezy{
+                        margin: 40px 0;
+                        .left{
+                            .dezy-title{
+                                font-size: 25px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+            .blog{
+                h1{
+                    font-size: 50px;
+                }
+                .posts{
+                    width: 70%;
+                    margin: 0 auto;
+                    gap: 2rem;
+                }
+                .pagination{
+                    ul{
+                        width: 40%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        footer{
+            .footer-wrapper{
+                width: 70%;
+                .contact-address{
+                    justify-self: end;
+                }
+                .quick-links{
+                    .download-app{
+                        ul{
+                            width: 80%;
+                        }
+                    }
                 }
             }
         }

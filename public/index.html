@@ -39,5 +39,58 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(()=>{
+        // ScrollToTop
+        $(window).scroll(function () {
+          if ($(document).scrollTop() > 200) {
+            $(".scroll_top").fadeIn();
+            } else {
+              $(".scroll_top").fadeOut();
+            }
+        });
+        // Autoscroll
+      $(".links li a[href]").click((e) => {
+          let url = e.target.hash;
+          let activeClass = e.target;
+          let navbar = document.querySelector('.links')
+          // console.log(activeClass);
+          $("html, body").animate(
+            {
+              scrollTop: $(url).offset().top - 40,
+            },
+            1000
+          );
+          navbar.classList.toggle('show-nav')
+
+          let menu = $('#menu-check').prop('checked', false)
+          
+          // //   $(activeClass).css("display", "none");
+          $("a[href]").removeClass("active");
+          $(activeClass).addClass("active");
+        });
+
+         // scrollTop
+        // $(".scroll_top").click(() => {
+        //   $("html, body").animate(
+        //     {
+        //       scrollTop: $("html").offset().top - 40,
+        //     },
+        //     1000
+        //   );
+        // });
+
+        // $(window).scroll(function () {
+        //   let offsetTop = $("#contact").offset().top
+        //   let ScrollTopOffsetTop = $(".scroll_top").offset().top
+        //   if(parseInt(Math.round(offsetTop)) <  parseInt(Math.round(ScrollTopOffsetTop))){
+        //     $('.scroll_top').css({"backgroundColor":"grey"})
+        //   }else if(parseInt(Math.round(offsetTop)) >  parseInt(Math.round(ScrollTopOffsetTop)) !== 0){
+        //     $('.scroll_top').css({"backgroundColor":"#3F4254"})
+        //   }
+        // });
+      })
+    </script>
   </body>
 </html>

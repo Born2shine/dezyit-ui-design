@@ -4,7 +4,7 @@ import iphone_1 from "../../assets/images/iphones/portrait/iphone-1.png"
 import { BsChevronLeft, BsChevronRight, BsChevronDoubleLeft, BsChevronDoubleRight } from "react-icons/bs" 
 const Home = () => {
     return (
-       <section className="main-content">
+       <section className="main-content" id="home">
            <div className="hero">
                <div className="content">
                <aside className="left-aside">
@@ -32,7 +32,7 @@ const Home = () => {
                </aside>
                <aside className="right-aside">
                     <div className="iphone-animate">
-                        <img src={iphone_1} alt="iphone" />
+                        <img src="https://static.wixstatic.com/media/ec9816_58d376c7bae642ff8c9bc2d22895f107~mv2.png/v1/fill/w_358,h_577,al_c,q_95/Design%20Thinking%20Sprint%20-%20Centre3.webp" alt="iphone" />
                     </div>
                </aside>
                </div>
@@ -49,7 +49,7 @@ const Home = () => {
                </article>
            </section>
 
-           <section className="our-product">
+           <section className="our-product" id="product">
                <div className="title">
                    <h1>Our Product</h1>
                    <p>
@@ -58,7 +58,7 @@ const Home = () => {
                </div>
                <div className="product-images">
                    <article className="gallery-1">
-
+                        <img src="https://static.wixstatic.com/media/ec9816_85ec9845c5754d0b9fa317d89078fa77~mv2.png/v1/fill/w_328,h_397,al_c,q_95/Design%2520Thinking%2520Sprint%2520-Right3_edi.webp" alt="product-img" />
                    </article>
                    <article className="gallery-2">
                         <div className="iphone-animate">
@@ -66,7 +66,7 @@ const Home = () => {
                        </div>
                    </article>
                    <article className="gallery-3">
-
+                        <img src="https://static.wixstatic.com/media/ec9816_2531c0fea4cd4527aa79c81270c48597~mv2.png/v1/fill/w_328,h_397,al_c,q_95/Design%2520Thinking%2520Sprint%2520-%2520Left2_e.webp" alt="product-img" />
                    </article>
                </div>
                <div className="download-app">
@@ -82,7 +82,7 @@ const Home = () => {
                     </ul>
                 </div>
            </section>
-           <section className="why-dezy-it">
+           <section className="why-dezy-it" id="why-us">
                <h1>Why Dezy It?</h1>
                <div className="why-wrapper">
                    {/* single article */}
