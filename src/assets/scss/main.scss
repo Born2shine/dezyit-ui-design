@@ -118,6 +118,7 @@ p{
                 margin-right: 6%;
                 margin-top: 6px;
                 z-index: 1000;
+                cursor: pointer;
                 input[type="checkbox"]{
                     appearance: none;
                     visibility: hidden;
@@ -302,7 +303,16 @@ p{
                             color: $clr-grey-3;
                             li{
                                 .dot{
-                                    margin-left: 4px;
+                                    margin: 0 10px;
+                                    position: relative;
+                                    &::before{
+                                        width: 2px;
+                                        height: 2px;
+                                        position: absolute;
+                                        background: $clr-grey;
+                                        content: "";
+                                        bottom: 45%;
+                                    }
                                 }
                                 .time{
                                     font-size: 13px;
@@ -412,7 +422,8 @@ p{
         color: $clr-white;
         border-radius: 50%;
         bottom: 15%;
-        right: 8%;
+        right: 4%;
+        cursor: pointer;
     }
 }
 

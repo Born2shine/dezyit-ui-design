@@ -154,6 +154,7 @@ p {
   margin-right: 6%;
   margin-top: 6px;
   z-index: 1000;
+  cursor: pointer;
 }
 
 .main header .navbar .toggle-navbar input[type="checkbox"] {
@@ -378,7 +379,17 @@ p {
 }
 
 .main .main-content .blog .posts .single-post .post-content .posted li .dot {
-  margin-left: 4px;
+  margin: 0 10px;
+  position: relative;
+}
+
+.main .main-content .blog .posts .single-post .post-content .posted li .dot::before {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  background: #727272;
+  content: "";
+  bottom: 45%;
 }
 
 .main .main-content .blog .posts .single-post .post-content .posted li .time {
@@ -511,7 +522,8 @@ p {
   color: #fff;
   border-radius: 50%;
   bottom: 15%;
-  right: 8%;
+  right: 4%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 540px) {
