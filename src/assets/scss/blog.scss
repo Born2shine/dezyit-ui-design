@@ -266,7 +266,12 @@
             .header{
                 width: 70%;
                 .right{
-                    
+                    .search-wrapper{
+                        .search-form{
+                            right: 15%;
+                            top: 10%;
+                        }
+                    }
                 }
             }
         }
