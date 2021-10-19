@@ -14,24 +14,23 @@ const Navbar = () => {
         <header>
           <div className="navbar">
           <div className="logo">
-            <img className="logo-img" src={logo} alt="dezy-logo" />
+            <Link to="/"> <img className="logo-img" src={logo} alt="dezy-logo" /> </Link>
           </div>
             <ul className={`links ${isMenuBarOpen ? 'show-nav' : ''} animate__animated`}>
             {
-                location.pathname === '/' || location.pathname === '/blog#blogs' ? (
+                location.pathname === '/' || location.pathname === '/blog' ? (
+                  <li className="link"> <Link to="/"> Home </Link> </li>
+                ) : (
                   <li className="link"><a className="active" href="#home">Home</a></li>
-                  ) : (
-                    <li className="link"> <Link to="/"> Home </Link> </li>
-                    )
-              }             
+                )
+              }
+             
               <li className="link"><a href="#product">Our Product</a></li>
               <li className="link"><a href="#why-us">Why Us?</a></li>
               {
-                location.pathname === '/blog' ||  location.pathname === '/#home' ||
-                location.pathname === '/'
-                ? (
+                location.pathname === '/blog' ? (
                   <li className="link"><a href="#blogs">Blogs</a></li> 
-                ) : (
+                ) : ( location.pathname === '/' &&
                   <li className="link"> <Link to="/blog"> Blogs </Link> </li>
                 )
               }
